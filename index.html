@@ -1,0 +1,163 @@
+import React from "react";
+
+// Plantilla de landing page para un negocio
+// - Está lista para usar dentro de un proyecto React con Tailwind CSS.
+// - Reemplaza los textos, imágenes y enlaces por los de tu negocio.
+
+export default function BusinessLandingPage() {
+  return (
+    <div className="min-h-screen bg-gray-50 text-gray-900">
+      {/* NAV */}
+      <header className="bg-white shadow-sm">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-red-500 rounded-full flex items-center justify-center text-white font-bold">B</div>
+            <div>
+              <h1 className="text-lg font-semibold">Nombre del Negocio</h1>
+              <p className="text-sm text-gray-500">Tagline corto y memorable</p>
+            </div>
+          </div>
+
+          <nav className="hidden md:flex gap-6 items-center text-sm">
+            <a href="#servicios" className="hover:text-gray-700">Servicios</a>
+            <a href="#sobre" className="hover:text-gray-700">Sobre nosotros</a>
+            <a href="#contacto" className="hover:text-gray-700">Contacto</a>
+            <a href="#" className="ml-4 px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-400 to-red-500 text-white">Reservar / Cotizar</a>
+          </nav>
+        </div>
+      </header>
+
+      {/* HERO */}
+      <main className="max-w-6xl mx-auto px-6 py-12">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-extrabold leading-tight">Haz crecer tu negocio con <span className="text-amber-500">[Producto o Servicio]</span></h2>
+            <p className="mt-4 text-gray-600">Descripción breve y humana de lo que ofreces: beneficios reales, enfoque en el cliente y propuesta de valor única. Dos o tres líneas como máximo.</p>
+
+            <div className="mt-6 flex gap-4">
+              <a href="#contacto" className="px-5 py-3 rounded-lg bg-amber-500 text-white font-medium">Contactar ahora</a>
+              <a href="#servicios" className="px-5 py-3 rounded-lg border border-gray-200">Ver servicios</a>
+            </div>
+
+            <div className="mt-8 grid grid-cols-2 gap-4">
+              <div className="p-4 bg-white rounded-lg shadow-sm">
+                <p className="text-sm text-gray-500">Clientes satisfechos</p>
+                <p className="text-2xl font-semibold">+120</p>
+              </div>
+              <div className="p-4 bg-white rounded-lg shadow-sm">
+                <p className="text-sm text-gray-500">Años de experiencia</p>
+                <p className="text-2xl font-semibold">5</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-center">
+            <div className="w-full max-w-md rounded-xl overflow-hidden shadow-lg bg-white">
+              <img src="https://via.placeholder.com/600x380?text=Imagen+del+negocio" alt="Imagen" className="w-full object-cover" />
+            </div>
+          </div>
+        </section>
+
+        {/* SERVICIOS */}
+        <section id="servicios" className="mt-16">
+          <h3 className="text-2xl font-bold">Nuestros servicios</h3>
+          <p className="mt-2 text-gray-600">Ofrecemos soluciones a la medida. Elige la que mejor se adapta a tu necesidad.</p>
+
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <h4 className="font-semibold">Servicio 1</h4>
+              <p className="mt-2 text-gray-600 text-sm">Breve descripción del servicio y su beneficio.</p>
+              <p className="mt-3 font-medium">Desde $XX.XXX</p>
+            </div>
+
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <h4 className="font-semibold">Servicio 2</h4>
+              <p className="mt-2 text-gray-600 text-sm">Breve descripción del servicio y su beneficio.</p>
+              <p className="mt-3 font-medium">Desde $XX.XXX</p>
+            </div>
+
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <h4 className="font-semibold">Servicio 3</h4>
+              <p className="mt-2 text-gray-600 text-sm">Breve descripción del servicio y su beneficio.</p>
+              <p className="mt-3 font-medium">Desde $XX.XXX</p>
+            </div>
+          </div>
+        </section>
+
+        {/* SOBRE */}
+        <section id="sobre" className="mt-16 bg-white p-6 rounded-lg shadow-sm">
+          <div className="md:flex gap-8 items-center">
+            <div className="md:flex-1">
+              <h3 className="text-2xl font-bold">Sobre nosotros</h3>
+              <p className="mt-3 text-gray-600">Breve historia del negocio, misión y visión. Un tono cercano y profesional que conecte con el visitante. Incluye datos destacables (p.ej. atención personalizada, garantías, servicio técnico, etc.).</p>
+
+              <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-600">
+                <li>• Atención a domicilio</li>
+                <li>• Garantía de calidad</li>
+                <li>• Entregas rápidas</li>
+                <li>• Soporte técnico</li>
+              </ul>
+            </div>
+            <div className="md:flex-1 mt-6 md:mt-0">
+              <img src="https://via.placeholder.com/500x320?text=Equipo+o+local" alt="Equipo" className="rounded-lg shadow" />
+            </div>
+          </div>
+        </section>
+
+        {/* TESTIMONIOS */}
+        <section className="mt-16">
+          <h3 className="text-2xl font-bold">Lo que dicen nuestros clientes</h3>
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <blockquote className="p-4 bg-white rounded-lg shadow-sm">"Excelente servicio, muy profesionales y entrega a tiempo." <cite className="block mt-3 text-sm text-gray-500">— Cliente A</cite></blockquote>
+            <blockquote className="p-4 bg-white rounded-lg shadow-sm">"Gran relación calidad-precio. Recomendados." <cite className="block mt-3 text-sm text-gray-500">— Cliente B</cite></blockquote>
+            <blockquote className="p-4 bg-white rounded-lg shadow-sm">"Atención personalizada y seguimiento postventa." <cite className="block mt-3 text-sm text-gray-500">— Cliente C</cite></blockquote>
+          </div>
+        </section>
+
+        {/* CONTACTO */}
+        <section id="contacto" className="mt-16 bg-white p-6 rounded-lg shadow-sm">
+          <h3 className="text-2xl font-bold">Contacto</h3>
+          <p className="mt-2 text-gray-600">Escríbenos para cotizar, reservar o resolver cualquier duda.</p>
+
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form className="space-y-4">
+              <input className="w-full p-3 border border-gray-200 rounded-lg" placeholder="Nombre" />
+              <input className="w-full p-3 border border-gray-200 rounded-lg" placeholder="Correo electrónico" />
+              <input className="w-full p-3 border border-gray-200 rounded-lg" placeholder="Teléfono" />
+              <textarea className="w-full p-3 border border-gray-200 rounded-lg" rows={4} placeholder="Mensaje"></textarea>
+              <div className="flex gap-3">
+                <button type="button" className="px-5 py-3 rounded-lg bg-amber-500 text-white">Enviar</button>
+                <a href="mailto:correo@negocio.co" className="px-5 py-3 rounded-lg border">Enviar por correo</a>
+              </div>
+            </form>
+
+            <div className="p-4">
+              <h4 className="font-semibold">Datos de contacto</h4>
+              <p className="mt-2 text-sm text-gray-600">Dirección: Calle Falsa 123, Ciudad</p>
+              <p className="mt-1 text-sm text-gray-600">Tel: +57 300 000 0000</p>
+              <p className="mt-1 text-sm text-gray-600">Horario: Lun - Vie, 8:00 - 18:00</p>
+
+              <div className="mt-4">
+                <h5 className="text-sm font-medium">Síguenos</h5>
+                <div className="flex gap-3 mt-2">
+                  <a href="#" className="text-sm">Facebook</a>
+                  <a href="#" className="text-sm">Instagram</a>
+                  <a href="#" className="text-sm">WhatsApp</a>
+                </div>
+              </div>
+
+              <div className="mt-6 bg-gray-50 p-3 rounded">
+                <p className="text-xs text-gray-500">Nota: este formulario no está conectado a un backend. Para que envíe mensajes reales, configura un endpoint o usa servicios como Formspree, Netlify Forms o un correo.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FOOTER */}
+        <footer className="mt-16 py-8 text-center text-sm text-gray-500">
+          © {new Date().getFullYear()} Nombre del Negocio — Hecho con cuidado.
+        </footer>
+      </main>
+    </div>
+  );
+}
